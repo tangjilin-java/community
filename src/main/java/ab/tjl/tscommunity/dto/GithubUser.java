@@ -1,46 +1,17 @@
 package ab.tjl.tscommunity.dto;
 
+import lombok.Data;
+
 /**
  * @author:tangjilin
- * @Description:把参数封装成一个对象
+ * @Description:把GitHub用户参数封装成一个对象传输层
  * @Date:Created in 16:49 2019/8/24
  * @Modified By:
  */
+@Data
 public class GithubUser {
     private String name;
     private Long id;
     private String bio;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
-
-    @Override
-    public String toString() {
-        return "GithubUser{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", bio='" + bio + '\'' +
-                '}';
-    }
+    private String avatarUrl;
 }
