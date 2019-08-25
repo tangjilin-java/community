@@ -18,7 +18,7 @@ import java.util.UUID;
 
 /**
  * @author:tangjilin
- * @Description:GitHub认证
+ * @Description:GitHub认证登录控制层
  * @Date:Created in 16:03 2019/8/24
  * @Modified By:
  */

@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * @author:tangjilin
- * @Description:
+ * @Description:GitHub的OkHTTP请求方法书写
  * @Date:Created in 16:09 2019/8/24
  * @Modified By:
  */
