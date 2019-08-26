@@ -34,24 +34,25 @@ public class IndexController {
     @GetMapping("/")
     public String index(HttpServletRequest request,
                         Model model,
-                        @RequestParam(name = "page",defaultValue = "1") Integer page,
-                        @RequestParam(name = "size",defaultValue = "2") Integer size) {
+                        @RequestParam(name = "page", defaultValue = "1") Integer page,
+                        @RequestParam(name = "size", defaultValue = "2") Integer size) {
+
         Cookie[] cookies = request.getCookies();
-        if (cookies != null && cookies.length != 0 ){
-            for (Cookie coolie:cookies) {
-                if (coolie.getName().equals("token")){
+        if (cookies != null && cookies.length != 0) {
+            for (Cookie coolie : cookies) {
+                if (coolie.getName().equals("token")) {
                     String token = coolie.getValue();
                     User user = userMapper.findByToken(token);
-                    if (user != null){
-                        request.getSession().setAttribute("user",user);
+                    if (user != null) {
+                        request.getSession().setAttribute("user", user);
                     }
                     break;
                 }
             }
         }
 
-        PaginationDTO pagination = questionService.list(page,size);
-        model.addAttribute("pagination",pagination);
+        PaginationDTO pagination = questionService.list(page, size);
+        model.addAttribute("pagination", pagination);
         return "index";
     }
 }
