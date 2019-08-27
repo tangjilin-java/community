@@ -4,6 +4,7 @@ import ab.tjl.tscommunity.dto.PaginationDTO;
 import ab.tjl.tscommunity.dto.QuestionDTO;
 import ab.tjl.tscommunity.exception.CustomizeErrorCode;
 import ab.tjl.tscommunity.exception.CustomizeException;
+import ab.tjl.tscommunity.mapper.QuestionExtMapper;
 import ab.tjl.tscommunity.mapper.QuestionMapper;
 import ab.tjl.tscommunity.mapper.UserMapper;
 import ab.tjl.tscommunity.model.Question;
@@ -27,6 +28,8 @@ import java.util.List;
 public class QuestionService {
     @Autowired
     private QuestionMapper questionMapper;
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
     @Autowired
     private UserMapper userMapper;
 
@@ -72,7 +75,6 @@ public class QuestionService {
 
     public PaginationDTO list(Integer userId, Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
-
         Integer totalPage;
 
         QuestionExample questionExample = new QuestionExample();
@@ -96,7 +98,6 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage, page);
         //size*(page-1)
         Integer offset = size * (page - 1);
-
 
         QuestionExample example = new QuestionExample();
         example.createCriteria().andCreatorEqualTo(userId);
@@ -149,5 +150,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
