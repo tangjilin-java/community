@@ -1,7 +1,6 @@
 package ab.tjl.tscommunity.controller;
 
 import ab.tjl.tscommunity.dto.QuestionDTO;
-import ab.tjl.tscommunity.mapper.QuestionMapper;
 import ab.tjl.tscommunity.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

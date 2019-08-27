@@ -1,9 +1,11 @@
 package ab.tjl.tscommunity;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan(basePackages = "ab.tjl.tscommunity.mapper")
 public class TscommunityApplication {
 
     public static void main(String[] args) {

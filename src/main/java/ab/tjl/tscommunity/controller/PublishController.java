@@ -1,7 +1,6 @@
 package ab.tjl.tscommunity.controller;
 
 import ab.tjl.tscommunity.dto.QuestionDTO;
-import ab.tjl.tscommunity.mapper.QuestionMapper;
 import ab.tjl.tscommunity.model.Question;
 import ab.tjl.tscommunity.model.User;
 import ab.tjl.tscommunity.service.QuestionService;
