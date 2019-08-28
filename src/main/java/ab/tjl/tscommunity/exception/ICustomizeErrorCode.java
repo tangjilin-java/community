@@ -8,5 +8,5 @@ package ab.tjl.tscommunity.exception;
  */
 public interface ICustomizeErrorCode {
     String getMessage() ;
-    //Integer getCode();
+    Integer getCode();
 }
