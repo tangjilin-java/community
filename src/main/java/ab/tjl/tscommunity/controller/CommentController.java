@@ -1,7 +1,9 @@
 package ab.tjl.tscommunity.controller;
 
 import ab.tjl.tscommunity.dto.CommentCreateDTO;
+import ab.tjl.tscommunity.dto.CommentDTO;
 import ab.tjl.tscommunity.dto.ResultDTO;
+import ab.tjl.tscommunity.enums.CommentTypeEnum;
 import ab.tjl.tscommunity.exception.CustomizeErrorCode;
 import ab.tjl.tscommunity.model.Comment;
 import ab.tjl.tscommunity.model.User;
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @author:tangjilin
@@ -46,5 +49,12 @@ public class CommentController {
         comment.setLikeCount(0L);
         commentService.insert(comment);
         return ResultDTO.okOf();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/comment/{id}",method = RequestMethod.GET)
+    public ResultDTO<List> comments(@PathVariable(name = "id") Long id){
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+        return ResultDTO.okOf(commentDTOS);
     }
 }

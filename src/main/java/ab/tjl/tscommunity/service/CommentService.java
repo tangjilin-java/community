@@ -4,10 +4,7 @@ import ab.tjl.tscommunity.dto.CommentDTO;
 import ab.tjl.tscommunity.enums.CommentTypeEnum;
 import ab.tjl.tscommunity.exception.CustomizeErrorCode;
 import ab.tjl.tscommunity.exception.CustomizeException;
-import ab.tjl.tscommunity.mapper.CommentMapper;
-import ab.tjl.tscommunity.mapper.QuestionExtMapper;
-import ab.tjl.tscommunity.mapper.QuestionMapper;
-import ab.tjl.tscommunity.mapper.UserMapper;
+import ab.tjl.tscommunity.mapper.*;
 import ab.tjl.tscommunity.model.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +33,8 @@ public class CommentService {
     private QuestionExtMapper questionExtMapper;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private CommentExtMapper commentExtMapper;
 
     @Transactional
     public void insert(Comment comment) {
@@ -52,6 +51,11 @@ public class CommentService {
                 throw new CustomizeException(CustomizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
+            //增加评论数
+            Comment parentComment = new Comment();
+            parentComment.setId(comment.getParentId());
+            parentComment.setCommentCount(1);
+            commentExtMapper.incCommentCount(parentComment);
         }else {
             //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
@@ -64,11 +68,11 @@ public class CommentService {
         }
     }
 
-    public List<CommentDTO> listByQuestionId(Long id) {
+    public List<CommentDTO> listByTargetId(Long id, CommentTypeEnum type) {
         CommentExample commentExample = new CommentExample();
         commentExample.createCriteria()
                 .andParentIdEqualTo(id)
-                .andTypeEqualTo(CommentTypeEnum.QUESTION.getType());
+                .andTypeEqualTo(type.getType());
         commentExample.setOrderByClause("gmt_create desc");
         List<Comment> comments = commentMapper.selectByExample(commentExample);
 
