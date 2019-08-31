@@ -3,6 +3,7 @@ package ab.tjl.tscommunity.service;
 import ab.tjl.tscommunity.dto.PaginationDTO;
 import ab.tjl.tscommunity.dto.QuestionDTO;
 import ab.tjl.tscommunity.dto.QuestionQueryDTO;
+import ab.tjl.tscommunity.enums.SortEnum;
 import ab.tjl.tscommunity.exception.CustomizeErrorCode;
 import ab.tjl.tscommunity.exception.CustomizeException;
 import ab.tjl.tscommunity.mapper.QuestionExtMapper;
@@ -37,12 +38,18 @@ public class QuestionService {
     @Autowired
     private UserMapper userMapper;
 
-    public PaginationDTO list(String search, Integer page, Integer size) {
+    public PaginationDTO list(String search,String tag, String sort, Integer page, Integer size) {
 
         if (StringUtils.isNotBlank(search)) {
-            String[] tags = StringUtils.split(search, ",");
-            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays
+                    .stream(tags)
+                    .filter(StringUtils::isNotBlank)
+                    .map(t -> t.replace("+", "").replace("*", "").replace("?", ""))
+                    .filter(StringUtils::isNotBlank)
+                    .collect(Collectors.joining("|"));
         }
+
 
 
         PaginationDTO paginationDTO = new PaginationDTO();
@@ -51,6 +58,25 @@ public class QuestionService {
 
         QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
         questionQueryDTO.setSearch(search);
+
+        if (StringUtils.isNotBlank(tag)) {
+            tag = tag.replace("+", "").replace("*", "").replace("?", "");
+            questionQueryDTO.setTag(tag);
+        }
+
+        for (SortEnum sortEnum : SortEnum.values()) {
+            if (sortEnum.name().toLowerCase().equals(sort)) {
+                questionQueryDTO.setSort(sort);
+
+                if (sortEnum == SortEnum.HOT7) {
+                    questionQueryDTO.setTime(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 7);
+                }
+                if (sortEnum == SortEnum.HOT30) {
+                    questionQueryDTO.setTime(System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 30);
+                }
+                break;
+            }
+        }
         Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
 
         //总页数处理
@@ -71,7 +97,8 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage, page);
 
         //size*(page-1)
-        Integer offset = size * (page - 1);
+      //  Integer offset = size * (page - 1);
+        Integer offset = page < 1 ? 0 : size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
         questionQueryDTO.setSize(size);
@@ -158,6 +185,15 @@ public class QuestionService {
             questionMapper.insert(question);
         }else {
             //更新
+            Question dbQuestion = questionMapper.selectByPrimaryKey(question.getId());
+            if (dbQuestion == null) {
+                throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+            }
+
+            if (dbQuestion.getCreator().longValue() != question.getCreator().longValue()) {
+                throw new CustomizeException(CustomizeErrorCode.INVALID_OPERATION);
+            }
+
             Question updateQuestion = new Question();
             updateQuestion.setGmtModified(System.currentTimeMillis());
             updateQuestion.setTitle(question.getTitle());

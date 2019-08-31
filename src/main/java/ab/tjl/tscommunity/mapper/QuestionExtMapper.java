@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author:tangjilin
- * @Description:问题详情控制层
+ * @Description:问题扩展方法
  * @Date:Created in 16:56 2019/8/27
  * @Modified By:
  */

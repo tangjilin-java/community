@@ -1,8 +1,6 @@
 package ab.tjl.tscommunity.controller;
 
 import ab.tjl.tscommunity.dto.PaginationDTO;
-import ab.tjl.tscommunity.enums.NotificationTypeEnum;
-import ab.tjl.tscommunity.mapper.UserMapper;
 import ab.tjl.tscommunity.model.User;
 import ab.tjl.tscommunity.service.NotificationService;
 import ab.tjl.tscommunity.service.QuestionService;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 /**
  * @author:tangjilin

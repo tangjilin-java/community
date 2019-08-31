@@ -3,6 +3,8 @@ package ab.tjl.tscommunity.controller;
 import ab.tjl.tscommunity.dto.CommentDTO;
 import ab.tjl.tscommunity.dto.QuestionDTO;
 import ab.tjl.tscommunity.enums.CommentTypeEnum;
+import ab.tjl.tscommunity.exception.CustomizeErrorCode;
+import ab.tjl.tscommunity.exception.CustomizeException;
 import ab.tjl.tscommunity.service.CommentService;
 import ab.tjl.tscommunity.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,13 +30,19 @@ public class QuestionController {
     private CommentService commentService;
 
     @GetMapping("/question/{id}")
-    public String question(@PathVariable(name = "id") Long id,
+    public String question(@PathVariable(name = "id") String id,
                            Model model){
-       QuestionDTO questionDTO = questionService.getById(id);
+        Long questionId = null;
+        try {
+            questionId = Long.parseLong(id);
+        } catch (NumberFormatException e) {
+            throw new CustomizeException(CustomizeErrorCode.INVALID_INPUT);
+        }
 
+       QuestionDTO questionDTO = questionService.getById(questionId);
        List<QuestionDTO> relatedQuestions = questionService.selectRelated(questionDTO);
-       List<CommentDTO> comments = commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
-       questionService.incView(id);//累加阅读数
+       List<CommentDTO> comments = commentService.listByTargetId(questionId, CommentTypeEnum.QUESTION);
+       questionService.incView(questionId);//累加阅读数
        model.addAttribute("question",questionDTO);
        model.addAttribute("comments",comments);
        model.addAttribute("relatedQuestions",relatedQuestions);
