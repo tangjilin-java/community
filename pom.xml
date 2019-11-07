@@ -11,6 +11,7 @@
     <groupId>ab.tjl</groupId>
     <artifactId>tscommunity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>tscommunity</name>
     <description>TSCommunity</description>
 
@@ -83,6 +84,11 @@
             <groupId>cn.ucloud.ufile</groupId>
             <artifactId>ufile-client-java</artifactId>
             <version>2.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
