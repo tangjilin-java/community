@@ -20,3 +20,107 @@
 2019-11-07 16:56:06.697  INFO 18196 --- [http-nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-11-07 16:56:06.697  INFO 18196 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-11-07 16:56:06.707  INFO 18196 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-11-07 19:40:29.651  INFO 19984 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Starting TscommunityApplication on 汤吉林 with PID 19984 (D:\IDEA\tscommunity\target\classes started by 汤吉林 in D:\IDEA\tscommunity)
+2019-11-07 19:40:29.654  INFO 19984 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-07 19:40:29.722  INFO 19984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-07 19:40:29.723  INFO 19984 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-07 19:40:31.044  INFO 19984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2019-11-07 19:40:31.067  INFO 19984 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 19:40:31.068  INFO 19984 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-07 19:40:31.153  INFO 19984 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 19:40:31.154  INFO 19984 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1431 ms
+2019-11-07 19:40:31.727  INFO 19984 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 19:40:31.784  INFO 19984 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 19:40:31.922  INFO 19984 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-11-07 19:40:32.029  INFO 19984 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 19:40:32.058  INFO 19984 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule start Thu Nov 07 19:40:32 CST 2019
+2019-11-07 19:40:32.088  INFO 19984 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2019-11-07 19:40:32.091  INFO 19984 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Started TscommunityApplication in 2.805 seconds (JVM running for 4.397)
+2019-11-07 19:40:32.093  INFO 19984 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-07 19:40:32.276  INFO 19984 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-07 19:40:32.303  INFO 19984 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule stop Thu Nov 07 19:40:32 CST 2019
+2019-11-07 19:40:43.279  INFO 13568 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Starting TscommunityApplication on 汤吉林 with PID 13568 (D:\IDEA\tscommunity\target\classes started by 汤吉林 in D:\IDEA\tscommunity)
+2019-11-07 19:40:43.283  INFO 13568 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-07 19:40:43.362  INFO 13568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-07 19:40:43.363  INFO 13568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-07 19:40:44.769  INFO 13568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2019-11-07 19:40:44.789  INFO 13568 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 19:40:44.789  INFO 13568 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-07 19:40:44.868  INFO 13568 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 19:40:44.869  INFO 13568 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1505 ms
+2019-11-07 19:40:45.419  INFO 13568 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 19:40:45.473  INFO 13568 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 19:40:45.609  INFO 13568 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-11-07 19:40:45.704  INFO 13568 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 19:40:45.732  INFO 13568 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule start Thu Nov 07 19:40:45 CST 2019
+2019-11-07 19:40:45.759  INFO 13568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2019-11-07 19:40:45.761  INFO 13568 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Started TscommunityApplication in 2.865 seconds (JVM running for 4.393)
+2019-11-07 19:40:45.766  INFO 13568 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-07 19:40:45.915  INFO 13568 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-07 19:40:45.944  INFO 13568 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule stop Thu Nov 07 19:40:45 CST 2019
+2019-11-07 19:41:05.354  INFO 13568 --- [http-nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 19:41:05.354  INFO 13568 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-07 19:41:05.360  INFO 13568 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-11-07 19:54:12.007  INFO 11972 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Starting TscommunityApplication on 汤吉林 with PID 11972 (D:\IDEA\tscommunity\target\classes started by 汤吉林 in D:\IDEA\tscommunity)
+2019-11-07 19:54:12.010  INFO 11972 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-07 19:54:12.060  INFO 11972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-07 19:54:12.060  INFO 11972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-07 19:54:13.384  INFO 11972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2019-11-07 19:54:13.408  INFO 11972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 19:54:13.409  INFO 11972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-07 19:54:13.527  INFO 11972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 19:54:13.528  INFO 11972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1468 ms
+2019-11-07 19:54:14.288  INFO 11972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 19:54:14.349  INFO 11972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 19:54:14.498  INFO 11972 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-11-07 19:54:14.605  INFO 11972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 19:54:14.630  INFO 11972 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule start Thu Nov 07 19:54:14 CST 2019
+2019-11-07 19:54:14.656  INFO 11972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2019-11-07 19:54:14.658  INFO 11972 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Started TscommunityApplication in 3.012 seconds (JVM running for 4.448)
+2019-11-07 19:54:14.662  INFO 11972 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-07 19:54:14.806  INFO 11972 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-07 19:54:14.826  INFO 11972 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule stop Thu Nov 07 19:54:14 CST 2019
+2019-11-07 19:54:31.720  INFO 11972 --- [http-nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 19:54:31.721  INFO 11972 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-07 19:54:31.726  INFO 11972 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-11-07 20:07:57.011  INFO 14516 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Starting TscommunityApplication on 汤吉林 with PID 14516 (D:\IDEA\tscommunity\target\classes started by 汤吉林 in D:\IDEA\tscommunity)
+2019-11-07 20:07:57.014  INFO 14516 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-07 20:07:57.070  INFO 14516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-07 20:07:57.070  INFO 14516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-07 20:07:58.717  INFO 14516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2019-11-07 20:07:58.745  INFO 14516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 20:07:58.745  INFO 14516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-07 20:07:58.833  INFO 14516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 20:07:58.833  INFO 14516 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1762 ms
+2019-11-07 20:07:59.420  INFO 14516 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 20:07:59.473  INFO 14516 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 20:07:59.601  INFO 14516 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-11-07 20:07:59.685  INFO 14516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 20:07:59.709  INFO 14516 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule start Thu Nov 07 20:07:59 CST 2019
+2019-11-07 20:07:59.729  INFO 14516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2019-11-07 20:07:59.732  INFO 14516 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Started TscommunityApplication in 3.186 seconds (JVM running for 4.787)
+2019-11-07 20:07:59.737  INFO 14516 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-07 20:07:59.874  INFO 14516 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-07 20:07:59.894  INFO 14516 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule stop Thu Nov 07 20:07:59 CST 2019
+2019-11-07 20:25:46.654  INFO 21352 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Starting TscommunityApplication on 汤吉林 with PID 21352 (D:\IDEA\tscommunity\target\classes started by 汤吉林 in D:\IDEA\tscommunity)
+2019-11-07 20:25:46.657  INFO 21352 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-07 20:25:46.721  INFO 21352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-07 20:25:46.721  INFO 21352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-07 20:25:47.980  INFO 21352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2019-11-07 20:25:48.010  INFO 21352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-07 20:25:48.011  INFO 21352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-07 20:25:48.113  INFO 21352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-07 20:25:48.113  INFO 21352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1392 ms
+2019-11-07 20:25:49.012  INFO 21352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 20:25:49.100  INFO 21352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-07 20:25:49.301  INFO 21352 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-11-07 20:25:49.417  INFO 21352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-07 20:25:49.450  INFO 21352 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule start Thu Nov 07 20:25:49 CST 2019
+2019-11-07 20:25:49.478  INFO 21352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2019-11-07 20:25:49.481  INFO 21352 --- [restartedMain] a.t.tscommunity.TscommunityApplication   : Started TscommunityApplication in 3.159 seconds (JVM running for 4.614)
+2019-11-07 20:25:49.486  INFO 21352 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-07 20:25:49.638  INFO 21352 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-07 20:25:49.662  INFO 21352 --- [scheduling-1] ab.tjl.tscommunity.schedule.HotTagTasks  : hotTagSchedule stop Thu Nov 07 20:25:49 CST 2019
+2019-11-07 20:25:57.327  INFO 21352 --- [http-nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 20:25:57.327  INFO 21352 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-07 20:25:57.332  INFO 21352 --- [http-nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
